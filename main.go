@@ -13,7 +13,7 @@ func main() {
 
 	i := inject.New()
 	i.Map(reg)
-	i.MapTo(reg, (*repo.IRegistry)(nil))
+	i.MapTo(reg, (*repo.IRegistry)(nil)) // also works without this line
 
 	i.Invoke(check)
 
